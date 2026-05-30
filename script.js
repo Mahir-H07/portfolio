@@ -178,9 +178,6 @@ filterButtons.forEach(button => {
 });
 
 
-/* ==========================
-   BACK TO TOP
-========================== */
 
 
 
@@ -244,30 +241,7 @@ revealOnScroll
    HEADER SCROLL EFFECT
 ========================== */
 
-const header =
-document.querySelector(".header");
 
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 50) {
-
-        header.style.background =
-        "rgba(8,17,31,0.95)";
-
-        header.style.boxShadow =
-        "0 5px 25px rgba(0,0,0,.25)";
-
-    } else {
-
-        header.style.background =
-        "rgba(8,17,31,0.70)";
-
-        header.style.boxShadow =
-        "none";
-
-    }
-
-});
 
 
 /* ==========================
