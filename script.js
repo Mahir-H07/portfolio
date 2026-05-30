@@ -200,40 +200,9 @@ backToTop.addEventListener("click", () => {
 });
 
 
-/* ==========================
-   DARK / LIGHT MODE
-========================== */
 
-/* ==========================
-   DARK / LIGHT MODE
-========================== */
 
-const themeToggle = document.getElementById("themeToggle");
 
-if(localStorage.getItem("theme") === "light"){
-
-    document.body.classList.add("light-mode");
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-
-}
-
-themeToggle.addEventListener("click", () => {
-
-    document.body.classList.toggle("light-mode");
-
-    if(document.body.classList.contains("light-mode")){
-
-        localStorage.setItem("theme","light");
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-
-    }else{
-
-        localStorage.setItem("theme","dark");
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-
-    }
-
-});
 
 /* ==========================
    SCROLL REVEAL
