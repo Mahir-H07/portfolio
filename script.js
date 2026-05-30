@@ -318,3 +318,35 @@ closeSuccess.addEventListener("click", () => {
     successModal.classList.remove("show");
 
 });
+
+
+
+
+
+
+
+
+new Swiper(".testimonialSwiper", {
+
+    loop:true,
+
+    autoplay:{
+        delay:2000,
+        disableOnInteraction:false,
+    },
+
+    spaceBetween:25,
+
+    breakpoints:{
+        0:{
+            slidesPerView:1
+        },
+        768:{
+            slidesPerView:2
+        },
+        1024:{
+            slidesPerView:3
+        }
+    }
+
+});
