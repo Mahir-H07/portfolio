@@ -513,7 +513,6 @@ ul{
 /* ==========================
    PROCESS
 ========================== */
-
 .process-grid{
     display:grid;
     grid-template-columns:
@@ -524,13 +523,44 @@ ul{
 .step{
     text-align:center;
     padding:35px;
+    transition:all .4s ease;
+    cursor:pointer;
+}
+
+.step:hover{
+    transform:translateY(-10px) scale(1.05);
+
+    background:linear-gradient(
+        135deg,
+        rgba(124,77,255,.15),
+        rgba(0,217,255,.15)
+    );
+
+    border:1px solid var(--secondary);
+
+    box-shadow:
+        0 0 20px rgba(0,217,255,.25),
+        0 0 40px rgba(124,77,255,.15);
 }
 
 .step span{
     font-size:45px;
     color:var(--secondary);
+    transition:.4s ease;
 }
 
+.step:hover span{
+    color:#ffffff;
+    transform:scale(1.1);
+}
+
+.step h3{
+    transition:.4s ease;
+}
+
+.step:hover h3{
+    color:var(--secondary);
+}
 /* ==========================
    FAQ
 ========================== */
