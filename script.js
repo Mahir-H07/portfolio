@@ -182,33 +182,33 @@ filterButtons.forEach(button => {
    BACK TO TOP
 ========================== */
 
-const backToTop =
-document.querySelector(".back-to-top");
+// const backToTop =
+// document.querySelector(".back-to-top");
 
-window.addEventListener("scroll", () => {
+// window.addEventListener("scroll", () => {
 
-    if (window.scrollY > 500) {
+//     if (window.scrollY > 500) {
 
-        backToTop.style.opacity = "1";
-        backToTop.style.visibility = "visible";
+//         backToTop.style.opacity = "1";
+//         backToTop.style.visibility = "visible";
 
-    } else {
+//     } else {
 
-        backToTop.style.opacity = "0";
-        backToTop.style.visibility = "hidden";
+//         backToTop.style.opacity = "0";
+//         backToTop.style.visibility = "hidden";
 
-    }
+//     }
 
-});
+// });
 
-backToTop.addEventListener("click", () => {
+// backToTop.addEventListener("click", () => {
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+//     window.scrollTo({
+//         top: 0,
+//         behavior: "smooth"
+//     });
 
-});
+// });
 
 
 

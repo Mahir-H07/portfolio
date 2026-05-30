@@ -992,7 +992,7 @@ ul{
    BACK TO TOP
 ========================== */
 
-.back-to-top{
+/* .back-to-top{
     position:fixed;
     right:25px;
     bottom:25px;
@@ -1007,7 +1007,7 @@ ul{
     var(--primary),
     var(--secondary));
     color:white;
-}
+} */
 
 
 
