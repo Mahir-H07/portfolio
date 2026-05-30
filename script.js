@@ -90,26 +90,37 @@ faqQuestions.forEach(question => {
 
     question.addEventListener("click", () => {
 
+        const faqItem =
+        question.parentElement;
+
         const answer =
         question.nextElementSibling;
 
-        const isOpen =
-        answer.style.maxHeight;
-
         document
-        .querySelectorAll(".faq-answer")
+        .querySelectorAll(".faq-item")
         .forEach(item => {
-            item.style.maxHeight = null;
-            item.style.padding = "0 20px";
+
+            if(item !== faqItem){
+
+                item.classList.remove("active");
+
+                item.querySelector(".faq-answer")
+                .style.maxHeight = null;
+
+            }
+
         });
 
-        if (!isOpen) {
+        faqItem.classList.toggle("active");
+
+        if(faqItem.classList.contains("active")){
 
             answer.style.maxHeight =
             answer.scrollHeight + "px";
 
-            answer.style.padding =
-            "0 20px 20px";
+        }else{
+
+            answer.style.maxHeight = null;
 
         }
 
@@ -313,14 +324,40 @@ window.addEventListener("mousemove", (e) => {
 const contactForm =
 document.querySelector(".contact-form");
 
+const modal =
+document.getElementById("customModal");
+
+const closeModal =
+document.getElementById("closeModal");
+
 contactForm.addEventListener("submit", (e) => {
 
     e.preventDefault();
 
-    alert(
-        "Thank you for your message! I will contact you soon."
-    );
+    const name =
+    contactForm.querySelector('input[type="text"]').value.trim();
+
+    const email =
+    contactForm.querySelector('input[type="email"]').value.trim();
+
+    const message =
+    contactForm.querySelector('textarea').value.trim();
+
+    if(!name || !email || !message){
+
+        modal.classList.add("show");
+        return;
+
+    }
+
+    alert("Message sent successfully!");
 
     contactForm.reset();
+
+});
+
+closeModal.addEventListener("click", () => {
+
+    modal.classList.remove("show");
 
 });
