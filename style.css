@@ -198,7 +198,7 @@ ul{
     display:flex;
     align-items:center;
     position:relative;
-    margin-top:36px;
+    
 }
 
 
@@ -795,7 +795,7 @@ ul{
     background:#18253f;
     color:white;
         font-size:18px;
-    font-weight:600;
+    font-weight:400;
     
     
 }
@@ -890,6 +890,93 @@ ul{
         #00d9ff
     );
 }
+
+
+.success-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.success-modal.show{
+    display:flex;
+}
+
+.success-box{
+    width:90%;
+    max-width:420px;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:#162235;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 0 25px rgba(0,217,255,.12);
+}
+
+.success-icon{
+    width:80px;
+    height:80px;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(
+        135deg,
+        #7c4dff,
+        #00d9ff
+    );
+}
+
+.success-icon i{
+    font-size:34px;
+    color:white;
+}
+
+.success-box h3{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.success-box p{
+    color:#b8c1d1;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.success-box button{
+    border:none;
+    padding:12px 28px;
+    border-radius:50px;
+    cursor:pointer;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #7c4dff,
+        #00d9ff
+    );
+}
+
+
 
 /* ==========================
    FOOTER

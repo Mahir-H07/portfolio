@@ -320,7 +320,6 @@ window.addEventListener("mousemove", (e) => {
 /* ==========================
    CONTACT FORM DEMO
 ========================== */
-
 const contactForm =
 document.querySelector(".contact-form");
 
@@ -329,6 +328,12 @@ document.getElementById("customModal");
 
 const closeModal =
 document.getElementById("closeModal");
+
+const successModal =
+document.getElementById("successModal");
+
+const closeSuccess =
+document.getElementById("closeSuccess");
 
 contactForm.addEventListener("submit", (e) => {
 
@@ -350,7 +355,7 @@ contactForm.addEventListener("submit", (e) => {
 
     }
 
-    alert("Message sent successfully!");
+    successModal.classList.add("show");
 
     contactForm.reset();
 
@@ -359,5 +364,11 @@ contactForm.addEventListener("submit", (e) => {
 closeModal.addEventListener("click", () => {
 
     modal.classList.remove("show");
+
+});
+
+closeSuccess.addEventListener("click", () => {
+
+    successModal.classList.remove("show");
 
 });
