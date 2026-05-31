@@ -15,6 +15,16 @@ document.querySelectorAll(".nav-menu a").forEach(link => {
     });
 });
 
+document.addEventListener("click", (e) => {
+    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        navMenu.classList.remove("active");
+    }
+});
+
+window.addEventListener("scroll", () => {
+    navMenu.classList.remove("active");
+});
+
 
 /* ==========================
    ACTIVE NAVIGATION

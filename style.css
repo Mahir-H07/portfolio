@@ -1081,54 +1081,53 @@ ul{
 
 @media(max-width:768px){
 
-    .hamburger{
+   .hamburger{
         display:block;
+        cursor:pointer;
     }
 
-    .nav-menu{
-        position:fixed;
-        top:80px;
-        left:-100%;
-
-        width:40%;
-        max-width:170px;
-       height:auto;
-
-        background:rgba(10,14,32,.95);
-        backdrop-filter:blur(20px);
-
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:flex-start;
-
-       padding:15px;
-        gap:15px;
-
-        text-align:center;
-
-        border-radius:20px 20px 20px 20px;
-
-        transition:.4s ease;
-        z-index:999;
-    }
-
-
-    
 .nav-menu{
-    transform:translateX(-20px);
-    opacity:0;
+    position: fixed;
+       width: 150px;
+    height: auto;
+    gap: 0;
+
+    top: 95px;
+    right: 20px;
+
+    left: auto;
+
+    width: 180px;
+
+    background: rgba(37, 53, 87, 0.95);
+    backdrop-filter: blur(50px);
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s ease;
+
+    z-index: 999;
 }
 
 .nav-menu.active{
-    left:10px;
-    transform:translateX(0);
-    opacity:1;
+    opacity: 1;
+    visibility: visible;
 }
-   
-    .nav-menu.active{
-        left:0;
-    }
+
+.nav-menu a{
+    display:block;
+         padding: 8px 0;
+    font-size: 16px;
+    text-align:center;
+}
 
     .hero-content h1{
         font-size:42px;
@@ -1171,4 +1170,37 @@ ul{
 .hero{
         padding-top:120px;
     }
+
+ #about{
+        padding-top: 120px;
+    }
+
+     #services{
+        padding-top: 120px;
+    }
+     #portfolio{
+        padding-top: 120px;
+    }
+
+      #why-me{
+        padding-top: 120px;
+    }
+
+    #testimonial{
+    padding-top:120px;
+}
+
+ #testimonial .section-title h2{
+        font-size: 30px;
+        white-space: nowrap;
+    }
+
+ #contact{
+        padding-top:120px;
+    }
+      .contact-info h3{
+        font-size: 32px;
+        white-space: nowrap;
+    }
+  
 }
