@@ -547,60 +547,66 @@ ul{
     line-height:1.7;
 }
 
+
+
 /* ==========================
    PORTFOLIO
 ========================== */
 
-.portfolio-filter{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-bottom:40px;
-}
-
-.portfolio-filter button{
-    padding:10px 20px;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
-}
 
 .portfolio-grid{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:25px;
+     align-items:start;
+    
 }
 
 .portfolio-card{
-    overflow:hidden;
-    border-radius:20px;
     position:relative;
+    overflow:hidden;
+    border-radius:18px;
+    background:#111827;
+  
 }
+
+
 
 .portfolio-card img{
-    transition:.5s;
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:18px;
 }
 
-.portfolio-card:hover img{
-    transform:scale(1.1);
-}
+/* Filter Buttons */
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.6);
+.portfolio-filter{
     display:flex;
     justify-content:center;
-    align-items:center;
-    opacity:0;
-    transition:.4s;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:50px;
 }
 
-.portfolio-card:hover .overlay{
-    opacity:1;
+.portfolio-filter button{
+    padding:10px 22px;
+    border:none;
+    border-radius:50px;
+    background:#ffffff15;
+    color:#fff;
+    cursor:pointer;
+   
 }
+
+.portfolio-filter button.active{
+    background:linear-gradient(135deg,#827cf4,#00C2FF);
+}
+
+
+
+
+
 
 /* ==========================
    why me
@@ -1203,4 +1209,17 @@ ul{
         white-space: nowrap;
     }
   
+}
+
+
+@media(max-width:992px){
+    .portfolio-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
 }

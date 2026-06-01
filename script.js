@@ -93,65 +93,13 @@ window.addEventListener("load", animateSkills);
    FAQ ACCORDION
 ========================== */
 
-const faqQuestions =
-document.querySelectorAll(".faq-question");
-
-faqQuestions.forEach(question => {
-
-    question.addEventListener("click", () => {
-
-        const faqItem =
-        question.parentElement;
-
-        const answer =
-        question.nextElementSibling;
-
-        document
-        .querySelectorAll(".faq-item")
-        .forEach(item => {
-
-            if(item !== faqItem){
-
-                item.classList.remove("active");
-
-                item.querySelector(".faq-answer")
-                .style.maxHeight = null;
-
-            }
-
-        });
-
-        faqItem.classList.toggle("active");
-
-        if(faqItem.classList.contains("active")){
-
-            answer.style.maxHeight =
-            answer.scrollHeight + "px";
-
-        }else{
-
-            answer.style.maxHeight = null;
-
-        }
-
-    });
-
-});
 
 
 /* ==========================
    PORTFOLIO FILTER
 ========================== */
-
-const filterButtons =
-document.querySelectorAll(
-".portfolio-filter button"
-);
-
-const portfolioItems =
-document.querySelectorAll(
-".portfolio-card"
-);
+const filterButtons = document.querySelectorAll(".portfolio-filter button");
+const portfolioItems = document.querySelectorAll(".portfolio-card");
 
 filterButtons.forEach(button => {
 
@@ -163,36 +111,24 @@ filterButtons.forEach(button => {
 
         button.classList.add("active");
 
-        const filter =
-        button.dataset.filter;
+        const filter = button.dataset.filter;
 
         portfolioItems.forEach(item => {
 
-            if (
-                filter === "all" ||
-                item.dataset.category === filter
-            ) {
-
-                item.style.display = "block";
-
-            } else {
-
-                item.style.display = "none";
-
-            }
+          if (
+    filter === "all" ||
+    item.dataset.category === filter
+) {
+    item.style.display = "";
+} else {
+    item.style.display = "none";
+}
 
         });
 
     });
 
 });
-
-
-
-
-
-
-
 
 
 
