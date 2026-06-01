@@ -115,14 +115,14 @@ filterButtons.forEach(button => {
 
         portfolioItems.forEach(item => {
 
-          if (
-    filter === "all" ||
-    item.dataset.category === filter
-) {
-    item.style.display = "";
-} else {
-    item.style.display = "none";
-}
+            if (
+                filter === "all" ||
+                item.dataset.category === filter
+            ) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
 
         });
 
@@ -137,22 +137,22 @@ filterButtons.forEach(button => {
 ========================== */
 
 const revealElements =
-document.querySelectorAll(
-".service-card, .portfolio-card, .step, .about-card, .contact-info, .contact-form"
-);
+    document.querySelectorAll(
+        ".service-card, .portfolio-card, .step, .about-card, .contact-info, .contact-form"
+    );
 
 function revealOnScroll() {
 
     revealElements.forEach(el => {
 
         const top =
-        el.getBoundingClientRect().top;
+            el.getBoundingClientRect().top;
 
         if (top < window.innerHeight - 100) {
 
             el.style.opacity = "1";
             el.style.transform =
-            "translateY(0)";
+                "translateY(0)";
 
         }
 
@@ -165,21 +165,21 @@ revealElements.forEach(el => {
     el.style.opacity = "0";
 
     el.style.transform =
-    "translateY(50px)";
+        "translateY(50px)";
 
     el.style.transition =
-    "0.7s ease";
+        "0.7s ease";
 
 });
 
 window.addEventListener(
-"scroll",
-revealOnScroll
+    "scroll",
+    revealOnScroll
 );
 
 window.addEventListener(
-"load",
-revealOnScroll
+    "load",
+    revealOnScroll
 );
 
 
@@ -195,16 +195,16 @@ revealOnScroll
 window.addEventListener("mousemove", (e) => {
 
     const glow =
-    document.querySelector(".image-glow");
+        document.querySelector(".image-glow");
 
     const x =
-    (window.innerWidth / 2 - e.pageX) / 40;
+        (window.innerWidth / 2 - e.pageX) / 40;
 
     const y =
-    (window.innerHeight / 2 - e.pageY) / 40;
+        (window.innerHeight / 2 - e.pageY) / 40;
 
     glow.style.transform =
-    `translate(${x}px, ${y}px)`;
+        `translate(${x}px, ${y}px)`;
 
 });
 
@@ -213,34 +213,34 @@ window.addEventListener("mousemove", (e) => {
    CONTACT FORM DEMO
 ========================== */
 const contactForm =
-document.querySelector(".contact-form");
+    document.querySelector(".contact-form");
 
 const modal =
-document.getElementById("customModal");
+    document.getElementById("customModal");
 
 const closeModal =
-document.getElementById("closeModal");
+    document.getElementById("closeModal");
 
 const successModal =
-document.getElementById("successModal");
+    document.getElementById("successModal");
 
 const closeSuccess =
-document.getElementById("closeSuccess");
+    document.getElementById("closeSuccess");
 
 contactForm.addEventListener("submit", (e) => {
 
     e.preventDefault();
 
     const name =
-    contactForm.querySelector('input[type="text"]').value.trim();
+        contactForm.querySelector('input[type="text"]').value.trim();
 
     const email =
-    contactForm.querySelector('input[type="email"]').value.trim();
+        contactForm.querySelector('input[type="email"]').value.trim();
 
     const message =
-    contactForm.querySelector('textarea').value.trim();
+        contactForm.querySelector('textarea').value.trim();
 
-    if(!name || !email || !message){
+    if (!name || !email || !message) {
 
         modal.classList.add("show");
         return;
@@ -274,24 +274,24 @@ closeSuccess.addEventListener("click", () => {
 
 new Swiper(".testimonialSwiper", {
 
-    loop:true,
+    loop: true,
 
-    autoplay:{
-        delay:2000,
-        disableOnInteraction:false,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
     },
 
-    spaceBetween:25,
+    spaceBetween: 25,
 
-    breakpoints:{
-        0:{
-            slidesPerView:1
+    breakpoints: {
+        0: {
+            slidesPerView: 1
         },
-        768:{
-            slidesPerView:2
+        768: {
+            slidesPerView: 2
         },
-        1024:{
-            slidesPerView:3
+        1024: {
+            slidesPerView: 3
         }
     }
 
